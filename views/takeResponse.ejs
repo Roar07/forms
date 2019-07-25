@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="/public/style.css">
+    </head>
+    <title>response</title>
+    <body>
+        <form id="response" action="#" method="POST">
+            
+           <% numberTypeCount=0;%>
+           <output><%=details.formTitle%></output>
+           <br>
+           <output><%=details.descrip%></output>
+            <hr> 
+            <%if(Array.isArray(details.query)){%>
+               <% for(i=0;i<(details.query.length);++i){%>
+                   <label for="ans"><%=details.query[i]%></label>
+                    <br>
+                <% if(details.type[i]=="text"){ %>
+                    <input type="text" name="ans">
+                    <!--class yet to given for style=== -->
+                       <%}%>
+
+                <% if(details.type[i]=="number"){%>
+                    <input type="number" name="ans" min="<%=details.min[numberTypeCount]%>" max="<%=details.max[numberTypeCount++]%>">
+                    <%}%>
+                <br>
+                    <%}%>
+            <%  }else{ %>
+                <label for="ans"><%=details.query%></label>
+                    <br>
+                
+                <%if(details.type=="text"){%>
+                    <input type="text" name="ans">
+                <%}%>
+                <% if(details.type[i]=="number"){%>
+                <input type="number" name="ans" min="<%=details.min%>" max="<%=details.max%>">
+                <%}%>
+            <br>
+           <% }%>
+           <input type="submit" value="submit">
+        </form>
+    </body>
+</html> 

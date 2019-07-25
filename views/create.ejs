@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="/public/style.css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
+         </head>
+    <title>Create Form</title>
+    <body>
+   <% include partials/commonBar.ejs %>
+<h2>new form</h2>
+        <form id="final"action="/create" method="POST">
+
+  
+            <input type="text" name="formTitle" class="fTitle" placeholder="Form-Title:">
+            <input type="text" name="descrip" class="fTitle"placeholder="Description:">
+
+            <ul id="queries">
+            </ul>
+                <br>
+    
+            </form>
+     
+
+          <div id="toolbar">
+          <input type="button" value="New" class="toolAdd" id="newreq">
+          <input type="button" value="save" class="toolAdd" id="save">
+          </div>  
+
+   <script src="/public/create.js"></script>
+    </body>
+
+    
+</html>

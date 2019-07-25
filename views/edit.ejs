@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="/public/style.css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
+         </head>
+    <title>Create Form</title>
+    <body>
+   <% include partials/commonBar.ejs %>
+<h2>new form</h2>
+        <form id="final"action="/form/edit" method="POST">
+
+  
+            <input type="text" name="formTitle" class="fTitle" placeholder="Form-Title:" value="<%=details.formTitle%>">
+            <input type="text" name="descrip" class="fTitle"placeholder="Description:" value="<%=details.descrip%>">
+
+            <ul id="queries">
+              
+            </ul>
+                <br>
+    
+            </form>
+     
+            <form id="preview">
+            
+            </form>
+          <div id="toolbar">
+          <input type="button" value="New" class="toolAdd" id="newreq">
+          <input type="button" value="save" class="toolAdd" id="save">
+          <input type="button" value="preview" class="toolAdd" id="prebutton">
+          <input type="button" value="CreateUrl" class="toolAdd" id="url">
+          </div>  
+          
+          <p id="urlzone" style="display: none">
+          <input id="outurl"></input>
+          <button id="copyurl">copy</button>
+          </p>
+
+   <script src="/public/edit.js"></script>
+    </body>
+
+    
+</html>

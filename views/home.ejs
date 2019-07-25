@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="/public/style.css">
+    </head>
+    <title>SignUp</title>
+    <body>
+   <% include partials/commonBar.ejs %>
+   <br>
+   <a href="/create" class="barelement">new</a>  <!--add icon-->
+   <br>
+   <% for(i=0;i<(result.form.length);++i){%>
+    <a href='/form/<%=result.form[i].id%>''><%=result.form[i].details.formTitle%></a>
+    <br>
+   <%}%> 
+   
+
+
+    </body>
+</html>

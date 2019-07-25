@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(240, 175, 175);
+    font-size: 24px;
+}
+
+#final{
+    display: inline-block;
+    margin:10px 10px 0px 100px ;
+    background-color: rgb(209, 233, 253);
+    padding:30px;
+    width: 800px;
+}
+#toolbar{
+    margin:0px 0px 0px 100px;
+    background-color: rgb(142, 200, 252);
+    padding:10px;
+    border-bottom-right-radius: 30px
+}
+.fTitle{
+    all:unset;
+    display: block;
+    padding:8px;
+    font-size: 24px;
+    border: 0.5px groove black;
+    border-right: 10px groove rgb(216, 73, 73); 
+    background-color: white;
+    margin: 10px 2px;
+}
+
+#preview{
+    display:block;
+    background-color: rgb(255, 241, 238);
+    margin:10px;
+    padding: 10px;
+    float: right;
+}
+
+.activef{
+    all:unset;
+    display: inline-block;
+    margin:2px 0px 2px 2px;
+    padding: 3px ;
+    background-color: white;
+}
+
+.activef:active{
+    border-color: blue;
+}
+input[type="number"]{
+    width:60px;
+}
+select[class="activef"]{
+    -webkit-appearance: menulist-button
+}
+
+.toolAdd{
+    all:unset;
+    background-color: rgb(159, 159, 224);
+    padding: 8px;
+    border-radius: 30px;
+    text-align: center;
+}
+
